@@ -1,0 +1,7 @@
+{
+    "panelInfoList":
+    [
+		{"panelType":"MainMenu","path":"UIPrefab/MainMenu"},
+        {"panelType":"SmallMenu","path":"UIPrefab/SmallMenu"}
+	]
+}
