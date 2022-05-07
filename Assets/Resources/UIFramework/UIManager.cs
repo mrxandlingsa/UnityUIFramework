@@ -56,6 +56,7 @@ namespace SinsUIFramework
         void Test()
         {
             UIManager.Instance.PushPanel(UIPanelType.MainMenu);
+            UIManager.Instance.PushPanel(UIPanelType.RightMenu);
             //UIManager.Instance.PushPanel(UIPanelType.SmallMenu);
         }
 
@@ -72,7 +73,6 @@ namespace SinsUIFramework
             if (panel == null)
             {
                 string path = panelPathDict.GetValue(panelType);
-                Debug.Log(path);
                 GameObject panelGo = Instantiate(Resources.Load<GameObject>(path), CanvasTransform, false);
                 panel = panelGo.GetComponent<BasePanel>();
                 panelDict.Add(panelType, panel);

@@ -6,7 +6,7 @@ public static class UIPanelType
 {
     public static string MainMenu = "MainMenu";
     public static string SmallMenu = "SmallMenu";
-    
+    public static string RightMenu = "RightMenu";
     
     
 }
