@@ -161,7 +161,8 @@ public class FlyCamera : MonoBehaviour
             var positionLerpPct = 1f - Mathf.Exp((Mathf.Log(1f - 0.99f) / positionLerpTime) * Time.deltaTime);
             var rotationLerpPct = 1f - Mathf.Exp((Mathf.Log(1f - 0.99f) / rotationLerpTime) * Time.deltaTime);
             m_InterpolatingCameraState.LerpTowards(m_TargetCameraState, positionLerpPct, rotationLerpPct);
-
+            
+            //update current object transform
             m_InterpolatingCameraState.UpdateTransform(transform);
         }
 }
