@@ -271,7 +271,7 @@ namespace XCharts.Runtime
             if (serie != null)
             {
                 var serieData = serie.AddData(multidimensionalData, dataName, dataId);
-                RefreshPainter(serie.painter);
+                //RefreshPainter(serie.painter);
                 return serieData;
             }
             return null;
@@ -833,7 +833,6 @@ namespace XCharts.Runtime
             serie.serieName = serieName;
             serie.serieType = type.Name;
             serie.index = m_Series.Count;
-
             if (type == typeof(Scatter))
             {
                 serie.symbol.show = true;

@@ -13,9 +13,9 @@ namespace XCharts.Runtime
         public static Serie AddDefaultSerie(BaseChart chart, string serieName)
         {
             var serie = chart.AddSerie<Pie>(serieName);
-            chart.AddData(serie.index, 70, "pie1");
-            chart.AddData(serie.index, 20, "pie2");
-            chart.AddData(serie.index, 10, "pie3");
+            // chart.AddData(serie.index, 70, "pie1");
+            // chart.AddData(serie.index, 20, "pie2");
+            // chart.AddData(serie.index, 10, "pie3");
             return serie;
         }
 
@@ -24,5 +24,8 @@ namespace XCharts.Runtime
             var newSerie = SerieHelper.CloneSerie<Pie>(serie);
             return newSerie;
         }
+        
+        
+        
     }
 }
