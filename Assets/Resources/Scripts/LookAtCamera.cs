@@ -37,8 +37,8 @@ public class LookAtCamera : MonoBehaviour
     public float x;
     public float y;
     public float z;
-    
-    
+
+    public bool IsInit = true;
     public void TransCamera()
     {
 
@@ -86,16 +86,28 @@ public class LookAtCamera : MonoBehaviour
         }
         if (LookAtTargetTrans != null)
         {
+            var pos = CalcuteCameraPosition();
+            var Vector3Camera2Target = new Vector3(pos.x-LookAtTargetPosition.x,pos.y-LookAtTargetPosition.y,pos.z-LookAtTargetPosition.z);
+            Vector3 eulerAngles = Quaternion.LookRotation(new Vector3(-Vector3Camera2Target.x,-Vector3Camera2Target.y,-Vector3Camera2Target.z)).eulerAngles;
+            if (IsInit)
+            {
+                yaw = eulerAngles.x;
+                pitch = eulerAngles.y;
+                roll = eulerAngles.z;
+                x = pos.x;
+                y = pos.y;
+                z = pos.z;
+                return;
+            }
             var positionLerpPct = 1f - Mathf.Exp((Mathf.Log(1f - 0.99f) / positionLerpTime) * Time.deltaTime);
             var rotationLerpPct = 1f - Mathf.Exp((Mathf.Log(1f - 0.99f) / rotationLerpTime) * Time.deltaTime);
-            var pos = CalcuteCameraPosition();
-            Vector3 CurrentCameraPosition = this.transform.position;
             LerpPosTowards(pos, positionLerpPct);
-            var arg = new Vector3(Targetpitch,Targetyaw,roll);
-            LerpRotTowards(arg,rotationLerpPct);
             
+            
+            //这个是鼠标右键旋转所做的插值
+            //var arg = new Vector3(Targetpitch,Targetyaw,roll);
+            LerpRotTowards(eulerAngles,rotationLerpPct);
             UpdateTransform(transform);
-            // var Vector3D = new Vector3(pos.x-LookAtTargetPosition.x,pos.y-LookAtTargetPosition.y,pos.z-LookAtTargetPosition.z);
             
         }
     }
@@ -106,6 +118,7 @@ public class LookAtCamera : MonoBehaviour
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
+            IsInit = false;
             LookAtTargetPosition = hit.collider.gameObject.transform.position;
             LookAtTargetTrans = hit.collider.gameObject.transform;
         }

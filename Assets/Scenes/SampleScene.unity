@@ -974,8 +974,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.006839529, y: 0.99315673, z: -0.08093188, w: 0.083922215}
-  m_LocalPosition: {x: -0.26366067, y: 0.039041284, z: 2.8611546}
+  m_LocalRotation: {x: -0.048579283, y: 0.9424004, z: -0.15722395, w: -0.29120833}
+  m_LocalPosition: {x: 2.9327075, y: 1.4662145, z: 5.6165314}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1348,7 +1348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1301279553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1603,11 +1603,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SimpleView: 1
-  format: 3
+  format: 0
   withEdges2: 1
   depth:
     Automatic: 0
-    Value: 0
+    Value: -0.53
   mainDivisions:
     messure: 0
     unitsPerDivision: 0
@@ -1637,8 +1637,8 @@ MonoBehaviour:
     alignment: 2
   subDivisions:
     messure: 0
-    unitsPerDivision: 0
-    total: 3
+    unitsPerDivision: 1
+    total: 10
     material: {fileID: 2100000, guid: 387acf3cc0524344980e92fa3f38dfd1, type: 2}
     materialTiling:
       EnableTiling: 0
@@ -1795,6 +1795,8 @@ MonoBehaviour:
       - {x: 4, y: 2.4}
       - {x: 5, y: 3.8}
       - {x: 6, y: 4.8}
+      - {x: 7, y: 3.67}
+      - {x: 8, y: 5.58}
       IsBezierCurve: 0
       SegmentsPerCurve: 10
       Depth: 0
@@ -1988,7 +1990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 5
+  m_ReferencePixelsPerUnit: 1
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
