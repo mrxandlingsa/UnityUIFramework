@@ -50,26 +50,22 @@ namespace SinsUIFramework
             {
                 panelPathDict.Add(panelInfo.panelType, panelInfo.path);
             }
-            Test();
         }
 
-        void Test()
-        {
-            UIManager.Instance.PushPanel(UIPanelType.MainMenu);
-            UIManager.Instance.PushPanel(UIPanelType.RightMenu);
-            //UIManager.Instance.PushPanel(UIPanelType.SmallMenu);
-        }
+        //void Test()
+        //{
+        //    UIManager.Instance.PushPanel(UIPanelType.MainMenu);
+        //    //UIManager.Instance.PushPanel(UIPanelType.SmallMenu);
+        //}
 
         private BasePanel GetPanel(string panelType)
         {
-            Debug.Log(panelType);
             if (panelDict == null)
             {
                 panelDict = new Dictionary<string, BasePanel>();
             }
 
             BasePanel panel = panelDict.GetValue(panelType);
-            
             if (panel == null)
             {
                 string path = panelPathDict.GetValue(panelType);
@@ -119,9 +115,12 @@ namespace SinsUIFramework
             }
 
         }
-        
 
-
+        //次级页面进入后,初始的页面会不可点击,如果需要任意点击关闭,则需要此函数
+        public void ClosePanel(string panelType)
+        {
+            
+        }
 
 
 

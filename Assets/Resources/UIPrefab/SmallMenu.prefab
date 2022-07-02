@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Close
 --- !u!1 &3946759306837269214
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61aec147dfb71fd499357d5ccb30a2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CloseBtn: {fileID: 7354459863676839040}
 --- !u!225 &7743918844542825512
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -3,21 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SinsUIFramework;
-
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class SmallMenuScr : BasePanel
 {
     private CanvasGroup canvasGroup;
 
-    private void Start()
+    public Button CloseBtn;
+
+    private void Awake()
     {
         canvasGroup = this.GetComponent<CanvasGroup>();
     }
 
+    private void Start()
+    {
+        CloseBtn.onClick.AddListener(delegate() {UIManager.Instance.PopPanel(); });
+    }
+
     public override void OnEnter()
     {
-        Debug.Log("SmallMenuScr" + "OnEnter");
+        canvasGroup.alpha = 1;
     }
 
     public override void OnPause()
@@ -30,8 +37,9 @@ public class SmallMenuScr : BasePanel
         canvasGroup.blocksRaycasts = true;
     }
 
+    //
     public override void OnExit()
     {
-
+        canvasGroup.alpha = 0;
     }
 }
