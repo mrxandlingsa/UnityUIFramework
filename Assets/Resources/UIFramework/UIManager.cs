@@ -29,12 +29,7 @@ namespace SinsUIFramework
         private Dictionary<string, string> panelPathDict;
         private Dictionary<string, BasePanel> panelDict;
         private Stack<BasePanel> PanelStack;
-
-        public UIManager()
-        {
-            Awake();
-        }
-
+        
         protected override void Awake()
         {
             base.Awake();

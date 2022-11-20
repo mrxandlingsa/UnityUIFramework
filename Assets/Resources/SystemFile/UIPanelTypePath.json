@@ -1,7 +1,7 @@
 {
     "panelInfoList":
     [
-	  {"panelType":"MainPanel","path":"Prefabs/MainPanel"},
-      {"panelType":"Type1Panel","path":"Prefabs/Type1Panel"}
+	  {"panelType":"MainPanel","path":"UIPrefabs/MainPanel"},
+      {"panelType":"Type1Panel","path":"UIPrefabs/Type1Panel"}
 	]
 }

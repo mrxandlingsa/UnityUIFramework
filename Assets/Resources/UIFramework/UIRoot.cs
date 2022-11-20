@@ -5,9 +5,9 @@ using UnityEngine;
 using SinsUIFramework;
 public class UIRoot : MonoBehaviour
 {
-    private void Awake()
+    private void Start()
     {
-        UIManager uiManager = new UIManager();
+        UIManager uiManager = UIManager.Instance;
         uiManager.PushPanel(UIPanelType.MainPanel);
     }
 }
