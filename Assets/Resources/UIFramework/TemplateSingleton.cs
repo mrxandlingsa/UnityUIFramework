@@ -33,9 +33,6 @@ public class TemplateSingleton<T>:MonoBehaviour where T:TemplateSingleton<T>
        }
     }
     
-    
-    
-
     protected void OnDestroy()
     {
         if (_instance == this)

@@ -1,8 +1,7 @@
 {
     "panelInfoList":
     [
-	  {"panelType":"MainMenu","path":"UIPrefab/MainMenu"},
-      {"panelType":"SmallMenu","path":"UIPrefab/SmallMenu"},
-      {"panelType":"RightMenu","path":"UIPrefab/RightMenu"}
+	  {"panelType":"MainPanel","path":"Prefabs/MainPanel"},
+      {"panelType":"Type1Panel","path":"Prefabs/Type1Panel"}
 	]
 }

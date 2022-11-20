@@ -30,10 +30,10 @@ namespace SinsUIFramework
         private Dictionary<string, BasePanel> panelDict;
         private Stack<BasePanel> PanelStack;
 
-        // private UIManager()
-        // {
-        //     ParseUIPanelTypeJson();
-        // }
+        public UIManager()
+        {
+            Awake();
+        }
 
         protected override void Awake()
         {
@@ -51,13 +51,7 @@ namespace SinsUIFramework
                 panelPathDict.Add(panelInfo.panelType, panelInfo.path);
             }
         }
-
-        //void Test()
-        //{
-        //    UIManager.Instance.PushPanel(UIPanelType.MainMenu);
-        //    //UIManager.Instance.PushPanel(UIPanelType.SmallMenu);
-        //}
-
+        
         private BasePanel GetPanel(string panelType)
         {
             if (panelDict == null)

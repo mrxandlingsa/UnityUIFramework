@@ -7,7 +7,7 @@ public class UIRoot : MonoBehaviour
 {
     private void Awake()
     {
-        UIManager uiManager = UIManager.Instance;
-        uiManager.PushPanel(UIPanelType.MainMenu);
+        UIManager uiManager = new UIManager();
+        uiManager.PushPanel(UIPanelType.MainPanel);
     }
 }
